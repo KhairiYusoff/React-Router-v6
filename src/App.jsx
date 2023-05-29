@@ -15,12 +15,12 @@ function App() {
       element: <Root />,
       errorElement: <ErrorPage />,
       children: [
-        { path: '/', element: <Home /> },
-        { path: '/products', element: <Products /> },
-        { path: '/products/:productId', element: <ProductDetailPage /> }
-      ]
-    },
-  ])
+        { index: true, element: <Home /> },//path:''
+        { path: 'products', element: <Products /> },
+        { path: 'products/:productId', element: <ProductDetailPage /> }
+      ],
+    }
+  ]);
 
   return (
     <RouterProvider router={router} />
